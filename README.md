@@ -1,40 +1,26 @@
 # Kwadwo Agyei — Static Portfolio
 
-A responsive, single-page portfolio made with plain HTML, CSS and vanilla JavaScript. No package manager, framework, or build tool is needed.
+Plain HTML, CSS and vanilla JavaScript. No build step.
 
 ## Run locally
+Open `index.html` in a browser (or use VS Code Live Server). All paths are relative.
 
-Open `index.html` in a current browser, or use a simple static server such as VS Code Live Server. The project uses relative paths and is ready for static hosting.
+## Before publishing
+1. **Contact form:** create a form at https://formspree.io and paste its endpoint link (or just the ID after `/f/`) into `data-form-id=""` on the `<form class="contact-form">` in `index.html`. While empty, the form opens the visitor's email app.
+2. **Images:** the thesis comparison map, Colouring Ghana and Coordinate Setout screenshots, and `og-image.jpg` (social preview) are already in `assets/images/`. Compress any other photos you add.
+3. **Social preview:** add `og:url` and `og:image` (absolute URLs) in the `<head>` once you know your live address.
+4. **LULC thesis:** accuracy table and 2018/2024 maps are in the research card. If you re-run validation on independent areas, update the table and the note in `data-details`.
+5. Remove unused files (`Kwadwo.jpeg`, `TopImagesbackground.jpeg`, the Finnish Air Force photo, the `.docx` template).
 
-## Personalise before publishing
-
-Search for `[FILL IN]` in `index.html` to complete the details that only you can verify:
-
-- The CV PDF URL (place your PDF in `assets/cv/` and set its path).
-- GitHub and LinkedIn URLs.
-- The Formspree endpoint: create a form at [Formspree](https://formspree.io/), then replace `[FILL IN: ADD FORMSPREE FORM ID]` in the contact form action with its form ID.
-- The final-year LULC project’s imagery source, classification method, study area and findings.
-
-Existing supplied images have been copied to `assets/images/`. Use compressed WebP/AVIF copies before production if possible. Inline SVGs are used for interface icons, so no icon library is required.
-
-## GitHub Pages deployment
-
-1. Push this folder to a GitHub repository.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select your publishing branch (usually `main`) and the `/ (root)` folder, then save.
-5. GitHub will provide your public site URL after deployment.
-
-Because this is plain static HTML, it works directly on GitHub Pages without a build step.
+## GitHub Pages
+Settings → Pages → Deploy from a branch → `main` / `(root)`.
 
 ## Structure
-
 ```text
 index.html
 css/style.css
 js/script.js
-assets/
-  images/
-  cv/          # Add your CV PDF here
-  icons/       # Reserved for any additional local icons
+assets/images/
+documents/Kwadwo_Agyei_CV.pdf
+images/frozen.jpg   (page background)
 ```
